@@ -19,6 +19,10 @@ jobs:
         python-version: "3.10"
     - uses: actions/cache@v3
       name: Configure pip caching
+    - name: Set current date as env variable
+      run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+    - name: Echo current date
+      run: echo $NOW
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
@@ -44,9 +48,9 @@ jobs:
               const desc = context.payload.repository.description;
               let line = '';
               if (desc && (desc.startsWith('http://') || desc.startsWith('https://'))) {
-                  line = `- url: ${desc}` + '\n  output: shot.png\n  height: 800';
+                  line = `- url: ${desc}` + '\n  output: shop_$NOW.png\n';
               } else {
-                  line = '# - url: https://www.example.com/\n#   output: shot.png\n#   height: 800';
+                  line = '# - url: https://www.example.com/\n#   output: shop_$NOW.png\n#';
               }
               fs.writeFileSync('shots.yml', line + '\n');
           }
