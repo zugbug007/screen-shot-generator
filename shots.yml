@@ -1,2 +1,4 @@
-# - url: https://shop.nationaltrust.org.uk/
-#   output: shot.png
+- url: https://shop.nationaltrust.org.uk/
+   output: shot.png
+   wait: 10000
+   quality: 80
