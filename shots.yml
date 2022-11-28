@@ -2,3 +2,5 @@
   quality: 80
   wait: 10000
   url: https://shop.nationaltrust.org.uk/
+  javascript: |
+    document.querySelector("#cookieOptions > div.nt-cookie--controls > a.nt-cookie--button").click();
