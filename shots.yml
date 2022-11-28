@@ -1,6 +1,5 @@
 - output: ./assets/images/shop.png
   url: https://shop.nationaltrust.org.uk/
   quality: 80
-  javascript: |
-    document.querySelector("#cookieOptions > div.nt-cookie--controls > a.nt-cookie--button").click();
-  wait: 10000
+  wait: 5000
+  
