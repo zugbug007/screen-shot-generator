@@ -1,5 +1,5 @@
-- output: ./assets/images/shop_$(date +'%Y-%m-%d').png
+- output: ./assets/images/shop.png
   url: https://shop.nationaltrust.org.uk/
   quality: 80
-  wait: 5000
+  wait: 15000
   
