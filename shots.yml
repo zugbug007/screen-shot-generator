@@ -1,4 +1,4 @@
-- url: https://shop.nationaltrust.org.uk/
-   output: shot.png
-   wait: 10000
-   quality: 80
+- output: ./assets/images/shop.png
+  quality: 80
+  wait: 10000
+  url: https://shop.nationaltrust.org.uk/
